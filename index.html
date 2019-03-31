@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>Building Game</title>
+	<link rel='stylesheet' href='main.css'>	
+</head>
+<body>
+<script type='text/javascript'>
+	function modify()
+	{
+		document.getElementById('letsgame').style.display = 'block';
+		document.getElementById('play').style.display = 'none';
+	}
+</script>
+<section>
+	<img src="pictures/tuchi0.png" alt='tuchi' class='tuchi tuchi0' style='height:150px;width:250px;'/>
+	<img src="pictures/tuchi.png" alt='tuchi' class='tuchi tuchi1' `style='height:150px;'/>
+	<img src="pictures/tuchi3.png" alt='tuchi' class='tuchi tuchi4' style='height:200px; width:300px;opacity:0.8;'/>
+	<img src="pictures/tuchi1.png" alt='tuchi' class='tuchi tuchi2' style='height:150px;'/>
+	<img src="pictures/tuchi2.png" alt='tuchi' class='tuchi tuchi3' style='height:150px;'/>
+	<a href='' id='play' onclick='event.preventDefault();modify()' class='play'><p>play building game</p></a>
+</section>
+<article id='letsgame' 
+	style='width:80%; height:200px;background-color:rgb(0,255,0,0.9);position:absolute;left:150px;top:250px;color:white; display:none'>
+	<form method='GET' action='menu.html'>
+	<p 
+		style='padding:50px;text-align:center'>Пожалуйста, введите имя:
+	<input type='text' name='name' required autofocus='' placeholder='например: Никита' 
+		style='margin:10px;padding:3px;border-radius:10px;'/><br><br>
+	<input type='submit' value="let's play game" 
+		style='margin:10px;padding:3px;border-radius:10px;width:200px; color:green;font-weight:bolder;font-variant:small-caps;' />
+	</p>
+	</form>
+</article>	
+</body>
+</html>

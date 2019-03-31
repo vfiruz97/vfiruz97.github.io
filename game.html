@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>Building Game</title>
+	<link rel='stylesheet' href='game.css'>	
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+</head>
+<body onResize="refresh()">
+<div id='section' style='text-align:center;'>
+	<img src="pictures/kran.png" id='pc1' class='pc pc1' alt='pc1' />	
+	<img src="pictures/kran.png" id='pc11' class='pc pc11' alt='pc1' />
+	
+	
+	<img onclick='position();' src="pictures/krang.png" id='pc2' class='pc pc2' alt='pc2' />
+</div>
+
+<p style='text-align:center;' class='priv'>Нажмите на кран, что бы блоки попали на фундамент!</p>
+
+<img src='pictures/menu/041.gif' alt='fundamenttheme' class='pc fundamenttheme dzc' style='
+position:absolute;
+bottom:0; 
+height:140px; 
+width:100%;
+opacity:0.8;
+z-index:11;'>
+
+<img src='pictures/fun.png' alt='fundament' class='pc fundament dzc' style='
+position:absolute;
+width:180px;
+height:116px;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+bottom: 0;
+opacity:1.0;
+z-index:10;
+box-shdow:1px 1px 1px grey;'>
+
+
+<article id='letsgame' 
+	style='
+	background-color:rgb(50,168,206,1.0);
+	position:absolute;
+	left:0px;
+	top:0px;
+	color:white; 
+	text-shadow:3px 3px 6px white;
+text-align:center; display:none;	'>	
+	<p id='winner'
+		style='
+		padding:50px;
+		text-align:center;
+		text-align:center; 
+		position:absolute;
+		left: 0;right: 0;
+		margin-left: auto;
+		margin-right: auto; 
+		top:100px;
+		color:white;
+		font-size:56px;
+		text-shadow:2px 2px 3px green;
+		font-variant:small-caps;
+		text-transform:lowercase;
+		width:550px'>
+		
+		Win!
+		
+	</p>
+	<p 
+		style='
+		padding:50px;
+		text-align:center;
+		text-align:center; 
+		position:absolute;
+		left: 0;right: 0;
+		margin-left: auto;
+		margin-right: auto; 
+		top:150px;
+		color:white;
+		font-size:56px;
+		text-shadow:2px 2px 3px green;
+		font-variant:small-caps;
+		text-transform:lowercase;
+		width:550px'>
+		
+		
+		<a id='next' class='next' href='' style='text-align:center'>Next Level-></a>
+	</p>
+	<div style='position:relative; text-align:center;
+top:350px;  
+width:100%;
+opacity:1.0;'>
+		
+		
+		<a id='' class='' href='http://портал-стройка.рф/catalog/bani' style='text-align:center; margin:20px;padding:20px; color:white;'>
+		ПОПУЛЯРНЫЕ ПРОЕКТЫ. ВИЗУАЛИЗИРУЕМ ЛЮБОЙ ПРОЕКТ ИЗ ИНТЕРНЕТА НА ВАШЕМ УЧАСТКЕ<br><br>
+		<img src='pictures/menu/d1.png' style='width:350px'>
+		<img src='pictures/menu/d2.png' style='width:350px'>
+		<img src='pictures/menu/d3.png' style='width:350px'>
+		<img src='pictures/menu/4d.png' style='width:350px'>
+		</a>
+	</div>
+	
+	
+	
+</article>	
+	
+	
+	
+<script type='text/javascript'>
+	function refresh() { location.reload(); }
+	function position()
+	{
+		var el = document.getElementById('pc2').getBoundingClientRect();
+		//alert(el.top+'-'+el.left);	
+		document.getElementById('pc2').src= 'pictures/kran.png';
+		var kirpich = document.createElement('img');
+		kirpich.setAttribute('class', 'pc pc3 dzc');
+		kirpich.setAttribute('alt', 'pc3');		
+		kirpich.setAttribute('id', 'pc3');		
+		
+		if (localStorage.getItem("corectC") !== null) 
+			corectCount = localStorage.getItem("corectC");
+		else 
+		corectCount=0;
+		if (corectCount==3){
+	  kirpich.setAttribute('src', 'pictures/roof1.png');
+	  }
+	  else {
+	  kirpich.setAttribute('src', 'pictures/kirpich1.png');
+	  }
+		
+		//kirpich.setAttribute('src', 'pictures/kirpich1.png');
+		kirpich.setAttribute('style', 'top:'+el.top+'px');
+		kirpich.setAttribute('style', 'left:'+el.left+'px');
+		kirpich.style.top = el.top+'px;';
+		kirpich.style.left = el.left+'px;';
+		var parent = document.getElementById('pc2');
+		parent.parentNode.insertBefore(kirpich, parent.nextSibling);
+		parent.removeAttribute("onclick");
+		
+		  var elem = document.getElementById("pc3");   
+		  var pos = 0;
+		  var corectCount =0;
+		  var wH = window.innerHeight;
+		  var wW = window.innerWidth;
+		  var funGW1 = wW/2 - 115;
+		  var funGW2 = wW/2 - 115+100;
+		  var placeKir = window.innerHeight-115;
+		  var opacity  = 0;
+		  localStorage.setItem('opacity', 0);
+		 if(el.left >= funGW1 && el.left <= funGW2){
+		 
+			if (localStorage.getItem("corectC") !== null) 
+				corectCount = localStorage.getItem("corectC");
+			corectCount++;
+			localStorage.setItem('corectC', corectCount);
+			
+			
+			placeKir -= corectCount * 100;			
+			if(corectCount == 4){
+			
+			document.getElementById('letsgame').style.display = 'block';
+			document.getElementById('letsgame').style.width = window.innerWidth+'px';
+			document.getElementById('letsgame').style.height = window.innerHeight+'px';
+			document.getElementById('letsgame').style.zIndex = '100';			
+			}			
+		 } else {
+			
+			localStorage.setItem('opacity', 1);
+		 }
+		  var id = setInterval(frameBottom, 5);
+		  function frameBottom() {
+			 
+				if (pos == placeKir) {
+				  clearInterval(id);
+				  if(localStorage.getItem("opacity") == 1)
+					elem.style.opacity =0.0; 
+					else
+					elem.style.boxShadow ="";
+				} else {
+				  pos++; 
+				  elem.style.top = pos + "px"; 
+				  if(localStorage.getItem("opacity") == 1){
+					elem.style.boxShadow ="8px 8px 3px red";
+				} else {
+					elem.style.boxShadow ="8px 8px 3px green";
+				}
+				  
+				}
+		  }
+	}
+function myMove() {
+  var elem = document.getElementById("pc2");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == window.innerWidth) {
+      clearInterval(id);
+	  myMove();
+	  if (localStorage.getItem("corectC") !== null) 
+			corectCount = localStorage.getItem("corectC");
+		else 
+		corectCount=0;
+		if (corectCount==3){
+	  document.getElementById('pc2').src= 'pictures/roof.png';
+	  
+	  
+	  }
+	  else{
+	  document.getElementById('pc2').src= 'pictures/krang.png';
+	  }
+	  document.getElementById('pc2').setAttribute('onclick', "position()");
+    } else {
+      pos++; 
+      elem.style.right = pos + "px"; 
+    }
+  }
+}
+	function getUrlVars() 
+	{
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		vars[key] = value;
+		});
+		return vars;
+	}
+	var element = document.getElementById("winner");
+	element.innerHTML = "You win, " + getUrlVars()["name"] + "!";
+	var element = document.getElementById("next");
+	element.setAttribute('href', "menu.html?name="+ getUrlVars()["name"] +"&level=twoo");
+	var id = setTimeout(myMove, 5000);
+	localStorage.clear();
+	</script>
+</body>
+</html>

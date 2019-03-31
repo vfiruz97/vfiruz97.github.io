@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>Building Game</title>
+	<link rel='stylesheet' href='menu.css'>	
+</head>
+<body>
+<section>
+	<p id='hello' 
+		style='text-align:center; position:absolute;left: 0;right: 0;margin-left: auto;margin-right: auto; top:100px;color:white;font-size:56px;text-shadow:2px 2px 3px green;font-variant:small-caps;text-transform:lowercase;'>Hello Builder</p>
+	
+	<img src="pictures/menu/l1.png" alt='menu' id='menu' class='menu' style='width:100%; height:100%' usemap="#planetmap"/>
+	<map name="planetmap" style='display:inline; cursor: url("cursor.png")25 15, pointer!important'>
+		<!--<area shape="rect" coords="10,0,50,250" alt="Sun" href="imzo.htm" title='imzo'>-->
+		<area shape="circle" id='level1' id='level1' coords="150,350,150" alt="leve1" href="game.html" title='Lavel 1'>
+	</map>
+	
+</section>
+<script type='text/javascript'>
+	function getUrlVars() 
+	{
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			vars[key] = value;
+		});
+		return vars;
+	}
+	var element = document.getElementById("hello");
+	element.innerHTML = "hi, " + getUrlVars()["name"] + "!";
+	document.getElementById("level1").setAttribute('href', 'game.html?name='+getUrlVars()["name"]);	
+	var l2 = getUrlVars()["level"];
+	if(l2 == 'twoo')
+		document.getElementById("menu").setAttribute('src', 'pictures/menu/1112.png');	
+</script>
+</body>
+</html>
