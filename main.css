@@ -1,0 +1,30 @@
+body {
+	background: -webkit-linear-gradient(red , yellow);
+	background: -moz-linear-gradient(red , yellow);
+	background: -o-linear-gradient(red , yellow);
+	background: linear-gradient(red , yellow);
+	color: white;
+	font-family: Florence, cursive;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	animation-name: back-anim;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+}
+
+@keyframes back-anim{
+	0%	{background: -webkit-linear-gradient(top left, red , yellow);background: -moz-linear-gradient(top left, red , yellow);background:linear-gradient(top left, red , yellow);}
+	100%{background: -webkit-linear-gradient(50% 50%, green , blue);background: -moz-linear-gradient(50% 50%, green , blue);background:linear-gradient(50% 50%, green , blue);}
+}
+div#div{
+	display:inline-table;
+}
+p{
+	display: table-cell;
+	vertical-align: middle;
+}
+p img{
+	width:100px;
+}
