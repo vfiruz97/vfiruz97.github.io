@@ -98,11 +98,7 @@ During this period, I focused on mastering Flutter through both personal project
 
 ---
 
-### **Projects:**
-
----
-
-### 1. **Drosdogram (iOS)**
+### **Drosdogram (iOS)**
 
 An app for real estate developers in Sochi, Russia, designed to manage document workflows with clients.
 
@@ -117,7 +113,7 @@ An app for real estate developers in Sochi, Russia, designed to manage document 
 
 ---
 
-### 2. **Speed Test App**
+### **Speed Test App**
 
 A mobile application for measuring internet speed on the user’s device.
 
@@ -132,7 +128,7 @@ A mobile application for measuring internet speed on the user’s device.
 
 ---
 
-### 3. **Meditation App**
+### **Meditation App**
 
 A guided meditation app featuring dynamic animations and smooth user experience.
 
@@ -146,7 +142,7 @@ A guided meditation app featuring dynamic animations and smooth user experience.
 
 ---
 
-### 4. **Hansa-LAB**
+### **Hansa-LAB**
 
 An internal app for client communication and workflow management.
 
