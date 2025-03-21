@@ -180,7 +180,7 @@ A platform for selling and managing proxy servers, serving clients globally.
 **Tech Stack:** Laravel, Vue.js, UI Design, Payment Gateway Integration  
 [astroproxy.com](https://astroproxy.com/)
 
----
+--
 
 ## **Rebus (Dushanbe, Tajikistan)**
 
@@ -190,7 +190,7 @@ A platform for selling and managing proxy servers, serving clients globally.
 
 This is where my career as a web developer began. During my time at Rebus, I gained valuable hands-on experience in software development and client-focused solutions.
 
----
+-
 
 ### **Project: Irrigation System for HELVETAS**
 
