@@ -180,25 +180,24 @@ A platform for selling and managing proxy servers, serving clients globally.
 **Tech Stack:** Laravel, Vue.js, UI Design, Payment Gateway Integration  
 [astroproxy.com](https://astroproxy.com/)
 
----
 
 ## **Rebus (Dushanbe, Tajikistan)**
 
-  **Web Developer**  
-  **2016 – 2018**  
-  [rebus.tj](https://rebus.tj/)
-  
-  This is where my career as a web developer began. During my time at Rebus, I gained valuable hands-on experience in software development and client-focused solutions.
-  
-  ### **Project: Irrigation System for HELVETAS**
-  
-  Development of software for managing an irrigation system, commissioned by the international organization **HELVETAS**.
-  
-  **Responsibilities and Results:**
-  
-  - Developed the administrative panel for managing irrigation data and workflows.
-  - Worked on UI/UX design and implemented client-side logic to ensure intuitive user interaction.
-  - Integrated frontend with backend services and optimized system performance.
-  
-  **Tech Stack:** Yii2, jQuery, UI/UX Design (Admin Panel)  
-  [rebus.tj/projects/razrabotka-kompyuternoy-programmy](https://rebus.tj/projects/razrabotka-kompyuternoy-programmy)
+ **Web Developer**  
+ **2016 – 2018**  
+ [rebus.tj](https://rebus.tj/)
+ 
+ This is where my career as a web developer began. During my time at Rebus, I gained valuable hands-on experience in software development and client-focused solutions.
+ 
+ ### **Project: Irrigation System for HELVETAS**
+ 
+ Development of software for managing an irrigation system, commissioned by the international organization **HELVETAS**.
+ 
+ **Responsibilities and Results:**
+ 
+ - Developed the administrative panel for managing irrigation data and workflows.
+ - Worked on UI/UX design and implemented client-side logic to ensure intuitive user interaction.
+ - Integrated frontend with backend services and optimized system performance.
+ 
+ **Tech Stack:** Yii2, jQuery, UI/UX Design (Admin Panel)  
+ [rebus.tj/projects/razrabotka-kompyuternoy-programmy](https://rebus.tj/projects/razrabotka-kompyuternoy-programmy)
