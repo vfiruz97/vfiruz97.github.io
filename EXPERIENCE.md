@@ -1,6 +1,6 @@
 ## **BlueCookie (Remote, London, UK)**
 
-**Flutter Developer**  
+**Flutter Engineer**  
 **2020 – 2025**  
 [bluecookie.co.uk](https://bluecookie.co.uk)
 
