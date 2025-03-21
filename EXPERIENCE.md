@@ -10,8 +10,7 @@ A company focused on business digitalization through cross-platform software dev
 
 ### **Kobe.ai**
 
-A tool for automatic generation of personalized video content.  
-**Role:** Full-stack Developer (Flutter, WebSocket, Headless Browser)
+A tool for automatic generation of personalized video content.
 
 **Responsibilities and Achievements:**
 
@@ -164,6 +163,7 @@ An internal app for client communication and workflow management.
 
 A company focused on developing solutions in the VPN and proxy server space. The primary product is a proxy management platform under the brand **Astroproxy**.
 
+---
 ---
 
 ### **Project: Astroproxy**
