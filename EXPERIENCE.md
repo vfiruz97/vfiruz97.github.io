@@ -164,7 +164,6 @@ An internal app for client communication and workflow management.
 A company focused on developing solutions in the VPN and proxy server space. The primary product is a proxy management platform under the brand **Astroproxy**.
 
 ---
----
 
 ### **Project: Astroproxy**
 
