@@ -1,7 +1,7 @@
 ## **BlueCookie (Remote, London, UK)**
 
 **Flutter Engineer**  
-**2020 – 2025**  
+**2021 – 2025**  
 [bluecookie.co.uk](https://bluecookie.co.uk)
 
 A company focused on business digitalization through cross-platform software development using Flutter. Delivered custom solutions to clients across various industries.
@@ -91,7 +91,7 @@ A fitness app with subscription-based access to workout and diet plans.
 ## **Self-Employed (Remote)**
 
 **Flutter Developer**  
-**2018 – 2020**
+**2018 – 2021**
 
 During this period, I focused on mastering Flutter through both personal projects and small commercial applications. I continuously improved my skills by applying Flutter in real-world scenarios and staying engaged with the developer community.
 
@@ -159,7 +159,7 @@ An internal app for client communication and workflow management.
 ## **CyberZilla (Moscow, Russia)**
 
 **Web Engineer**  
-**2018 – 2020**
+**2018 – 2021**
 
 A company focused on developing solutions in the VPN and proxy server space. The primary product is a proxy management platform under the brand **Astroproxy**.
 
