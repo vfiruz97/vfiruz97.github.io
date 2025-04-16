@@ -1,324 +1,361 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Моё резюме | Ворисов Фируз Зафарович</title>
-	<!--fonts-->
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-	<!--//fonts-->
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- for-mobile-apps -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Ворисов, Фируз, Зафарович, Ворисов Фируз, Ворисов Фируз Зафарович, Фируз Зафарович, веб-программист, программирования, php, Laravel" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- //for-mobile-apps -->
-	<!-- js -->
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<!-- js -->
-	<!-- start-smooth-scrolling -->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-			});
-		});
-	</script>
-	<!-- start-smooth-scrolling -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Firuz Dart - Senior Flutter Developer</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+    }
+    /* Header & Navigation */
+    header {
+      background: #fff;
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      font-weight: 600;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #0073e6;
+    }
+    /* Hero Section */
+    #home {
+      background: url('background.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      margin-top: 70px; /* To prevent header overlap */
+    }
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    #home p {
+      font-size: 1.2rem;
+    }
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #222;
+    }
+    /* About Section */
+    #about .content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1rem;
+    }
+    #about p {
+      margin-bottom: 20px;
+    }
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .skill-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .skill-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #444;
+    }
+    .skill-card ul {
+      list-style: none;
+    }
+    .skill-card ul li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    /* Experience Section */
+    .experience-entry {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .experience-entry h3 {
+      margin-bottom: 5px;
+      color: #333;
+    }
+    .experience-entry span {
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .experience-entry ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+    .experience-entry ul li {
+      margin-bottom: 5px;
+      font-size: 0.95rem;
+    }
+    /* Education Section */
+    .education-entry {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .education-entry h3 {
+      margin-bottom: 5px;
+      color: #333;
+    }
+    .education-entry span {
+      font-size: 0.9rem;
+      color: #777;
+    }
+    /* Contact Section */
+    #contact {
+      background: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #ddd;
+    }
+    #contact a {
+      font-weight: 600;
+      color: #0073e6;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    footer p {
+      font-size: 0.9rem;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      #home h1 {
+        font-size: 2.5rem;
+      }
+      nav ul li {
+        margin-left: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-	<!-- banner -->
-	<div class="banner" id="home">
-		<div class="container"> 
-			<div class="top-header row">
-				<script src="js/classie.js"></script>
-				<!--top-nav---->
-				<div class="logo">
-					<a href="index.html"></a>
-				</div>
-				<div class="top-nav">
-					<div class="nav-icon">
-						<a href="#" class="right_bt" id="activator"><span> </span> </a>
-					</div>
-					<div class="box" id="box">
-						<div class="box_content">        					                         
-							<div class="box_content_center">
-								<div class="form_content">
-									<div class="menu_box_list">
-										<ul>
-											<li><a class="scroll" href="#home"><span>Главная</span></a></li>
-											<li><a class="scroll" href="#about"><span>Oбо мне</span></a></li>
-											<li><a class="scroll" href="#portfolio"><span>Портфолио</span></a></li>
-											<li><a class="scroll" href="#contact"><span>Контакт</span></a></li>
-											<div class="clearfix"> </div>
-										</ul>
-									</div>
-									<a class="boxclose" id="boxclose"> <span> </span></a>
-								</div>                                  
-							</div> 	
-						</div> 
-					</div>       	  
-				</div>
-				<!---start-click-drop-down-menu----->
-				<!----start-dropdown--->
-				<script type="text/javascript">
-					var $ = jQuery.noConflict();
-					$(function() {
-						$('#activator').click(function(){
-							$('#box').animate({'top':'0px'},900);
-						});
-						$('#boxclose').click(function(){
-							$('#box').animate({'top':'-1000px'},900);
-						});
-					});
-					$(document).ready(function(){
-						//Hide (Collapse) the toggle containers on load
-						$(".toggle_container").hide(); 
-						//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
-						$(".trigger").click(function(){
-							$(this).toggleClass("active").next().slideToggle("slow");
-							return false; //Prevent the browser jump to the link anchor
-						});
-					});
-				</script>
-				<!---//End-click-drop-down-menu----->
-				<div class="clearfix"> </div>
-			</div>
-			<div class="banner-info">
-				<div class="banner-left">
-					<img src="images/1.png" alt=""/>
-				</div>
-				<div class="banner-right">
-					<h1>Я ФИРУЗ</h1>
-					<div class="border"></div>
-					<h2>WEB-DEVELOPER</h2>
-					<a href="resume.docx" download>СКАЧАТЬ МОЁ РЕЗЮМЕ</a>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
-	<!--/header-banner-->
-	<!--about-->
-	<div class="about text-center" id="about">
-		<div class="container">
-			<h3>OБО МНЕ</h3>
-			<div class="strip text-center">
-				<img src="images/about.png" alt=" "/>
-			</div>
-			<p>Здравствуйте. Я Ворисов Фируз Зафарович, родился в 1997 году в городе Пенджикенте в Таджикистане.
-        В 2014 году я поступил в «Технологический университет Таджикистана» по специальности инженер-программист.
-        В связи с тем, что я был заинтересован в создании веб-сайтов, я изучил необходимые технологии, которые помогут создать хороший сайт.
-        В 2017 году, на третьем курсе, я получил работу в компанию Ребус на должности «Помощник веб-программиста». Я применил свою теорию 
-        на практике и таким образом укрепил свои знания в области программирования. 
-        За один год работы в компанию Ребусе я научился работать в команде и изучил 
-        Framwork Yii и JQuery, а также систему контроля версий Git. За это время с командой было выполнено три проекта, среди которых один был довольно большой проект. В разработке проектов я участвовал в серверной части приложения и также в клиентской части приложения.
-        В 2018 году после окончания университета я приехал учиться в Россию. 
-        Я поступил в Московский институт электронной техники по специальности инженер-программист. 
-        В настоящее время я учусь и работаю в компанию Интерактивные технологии. На работе мы используем Yii2 Framework. Самостоятельно я изучаю еще один экосистемы PHP фреймворк Laravel. Я учусь и развиваю свои навыки, чтобы всегда быть в курсе новейших технологий.<p>
-				<ul>
-					<li><a class="fb" href="https://vk.com/richboyinallife"></a></li>
-					<li><a class="goog" href="mailto:vfiruz97@gmail.com"></a></li>
-				</ul>
-			</div>
-		</div>
-		<!--//about-->
-		<div class="about-back"></div>
-		<!--my skill-->
-		<div class="my-skills text-center">
-			<div class="container">
-				<h3>МОИ НАВЫКИ</h3>
-				<div class="strip text-center"><img src="images/skill.png" alt=" "/></div>
-				<div class="skill-grids">
-					<div class="col-md-2 skills-grid text-center">
-						<p>ООП / Patterns <br> SOLID / PHPDoc</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<p>PHP 7 / Laravel <br> Yii2</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<p>JavaScript / JQuery</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<p>SQL / Eloquent ORM</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<p>Html 5 / CSS 3</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<p>Git / GitHub <br> Bitbucket</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>	
-		</div>
-		<!--//my skill-->
-		<!-- <div class="my-skill-back"></div> -->
-		<!--education-->
-		<div class="education text-center">
-			<div class="container">
-				<div class="edu-info">
-					<h3>ОБРАЗОВАНИЕ</h3>
-				</div>
-				<div class="strip text-center"><img src="images/edu.png" alt=" "/></div>
-				<div class="edu-grids">
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 edu-grid">
-						<p>2014 - 2018</p><span>Закончил</span>
-						<img src="images/arrow.png" alt=""/>
-						<div class="edu-border">
-							<div class="edu-grid-master">
-								<h3>БАКАЛАВР</h3>
-								<h4>Технологический университет Таджикистана</h4>
-							</div>
-							<div class="edu-grid-info">
-								<h5> <br>Факультет "Отраслевых информационных технологий", 
-								специальности "Программная инженерия"</h5>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 edu-grid">
-						<p>2018 - 2020</p><span>Заканчиваю</span>
-						<img src="images/arrow.png" alt=""/>
-						<div class="edu-border">
-							<div class="edu-grid-master">
-								<h3>МАГИСТРАТУРА</h3>
-								<h4>НИУ Московский институт электронной техники</h4>
-							</div>
-							<div class="edu-grid-info">
-								<h5>Инистут системной и программой инженерии и информационных технологий, 
-								специальности Программная инженерия</h5>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!--//education-->
-		<div class="strip-border"><p></p></div>
-		<!--work-->
-		<div class="work-experience text-center">
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Firuz Dart</div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-			<div class="container">
-				<div class="work-info">
-					<h3>РАБОЧИЙ СТАЖ</h3>
-				</div>
-				<div class="strip text-center"><img src="images/work.png" alt=" "/></div>
-				<div class="work-grids">
-					<div class="col-md-6 w-grid">
-						<div class="work-grid">
-							<h3>2018  - настоящее время</h3>
-							<div class="work-grid-info">
-								<h4>Интерактивные технологии</h4>
-								<h5>Веб-разработчик</h5>
-								<p>Я работаю в компанию Интерактивные технологии. На работе используем Yii2 Framework.</p>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 w-grid">
-						<div class="work-grid">
-							<h3>2017  - 2018</h3>
-							<div class="work-grid-info">
-								<h4>OOO «Ребус»</h4>
-								<h5>Помощник веб-программиста</h5>
-								<p>Я работал целый год как помощник веб-разработчик в компании OOO «Ребус».</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--//work-->
-		<div class="services-back"></div>
-		<!--portfolio-->
-		<div class="gallery-section text-center" id="portfolio">
-			<div class="container">
-				<h3>ПОРТФОЛИО</h3>
-				<div class="strip text-center"><img src="images/port.png" alt=" "/></div>
-				<p>В этом разделе перечислены некоторые проекты в которыч я участвовал или сам выполнил.
-					Ссылки на исхочников на мой github аккаунт. Вы можете перейти по ссылке и увидеть исходный код.</p>
-					
-				<strong style="color: while"><a href="https://github.com/vfiruz97/" style="text-color:while;">все мои проекты тут перейти по этой ссылке</a></strong>
-				<div class="gallery-grids">
-					<div class="top-gallery">
-						<div class="col-md-4 gallery-grid gallery1" style="padding:5px">
-							<a class="swipebox"><img src="images/elibrary.png" class="img-responsive" alt="/">
-								<div class="textbox">
-									<h4>БИБЛИОТЕКА elibrary.tut.tj</h4>
-									<p>Yii Framework</p>
-									<div class="button">
-										<a href="https://github.com/vfiruz97/elibrary.tut.tj" target="_blank" >ИСХОДНЫЙ</a>
-									</div>
-								</div>
-							</a>
-						</div>
+  <!-- Hero Section -->
+  <section id="home">
+    <div class="container">
+      <h1>Firuz Dart</h1>
+      <p>Senior Flutter Developer | Mobile Apps | Real-Time Solutions</p>
+    </div>
+  </section>
 
-						<div class="col-md-4 gallery-grid gallery1" style="padding:5px">
-							<a class="swipebox"><img src="images/chat-botvk.jpg" class="img-responsive" alt="/">
-								<div class="textbox">
-									<h4>Чат-бот для Вконтакте</h4>
-									<p>PHP</p>
-									<div class="button">
-										<a href="https://github.com/vfiruz97/chat-bot" target="_blank" >ИСХОДНЫЙ</a>
-									</div>
-								</div>
-							</a>
-						</div>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="content">
+        <p>I am a seasoned software developer with over 9 years of experience – including 6+ years specializing in Flutter and mobile engineering. I focus on building efficient, scalable, and high-performance cross-platform applications with seamless UI/UX.</p>
+        <p>My expertise extends to real-time communication, video streaming, and robust full-stack solutions, always striving for clean architecture and maintainable code.</p>
+      </div>
+    </div>
+  </section>
 
-						<div class="col-md-4 gallery-grid gallery1" style="padding:5px">
-							<a class="swipebox"><img src="images/beejee.png" class="img-responsive" alt="/">
-								<div class="textbox">
-									<h4>Приложение-задачник</h4>
-									<p>PHP</p>
-									<div class="button">
-										<a href="https://github.com/vfiruz97/beejee" target="_blank" >ИСХОДНЫЙ</a>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-			</div>
-		</div>
-	<div class="contact" id="contact">
-	<div class="container">
-		<div class="contact-info text-center">
-			<h3>КОНТАКТ</h3>
-			<div class="strip text-center"><img src="images/con1.png" alt=" "/></div>
-		</div>
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Mobile & Frontend</h3>
+          <ul>
+            <li>Flutter & Dart</li>
+            <li>Firebase & CI/CD</li>
+            <li>UI/UX Design</li>
+            <li>Real-Time Communication</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Web & Backend</h3>
+          <ul>
+            <li>Laravel, PHP & Node.js</li>
+            <li>Express & NestJS</li>
+            <li>REST APIs & GraphQL</li>
+            <li>CI/CD & Docker</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Databases</h3>
+          <ul>
+            <li>PostgreSQL, MySQL, SQLite</li>
+            <li>MongoDB, Firebase DB</li>
+            <li>Redis, Cassandra</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Architecture & Tools</h3>
+          <ul>
+            <li>Clean Architecture, BLoC</li>
+            <li>DDD, SOLID, DRY, KISS</li>
+            <li>Agile, Scrum, DevOps</li>
+            <li>Monitoring & Testing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<div class="contact-grids">
-			<div class="col-md-12 col-sm-12 contact-left" style='text-align:center'>
-				<ul>
-					<li>Юности 7 </li>
-					<li>Москва, Зеленоград</li>
-					<li>+79586345726</li>
-					<li><a href="mailto:vfiruz97@gmail.com">vfiruz97@gmail.com</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!--//contact-->
-	<div class="footer-top"></div>
-	<!--resume-->
-	<div class="resume text-center">
-		<div class="container">
-			<div class="strip text-center"><a href="resume.docx" download><img src="images/down.png" alt=" "/></a></div>
-			<div class="down"><a href="#">СКАЧАТЬ МОЕ РЕЗЮМЕ</a></div>
-		</div>
-	</div>
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      
+      <div class="experience-entry">
+        <h3>BlueCookie Limited</h3>
+        <span>Senior Flutter Engineer | 2021 - Present | London, England, United Kingdom</span>
+        <ul>
+          <li>Developed the personalized video content platform Kobe.ai with real-time audio/video via WebRTC.</li>
+          <li>Built an internal mobile app and admin panel for NECS Cleaning integrating real-time updates and maps.</li>
+          <li>Launched the cross-platform Kick It Out app for reporting discrimination incidents.</li>
+          <li>Migrated a native tax app to Flutter, improving UI and enhancing tax calculation modules.</li>
+          <li>Created the Karbon Fit app integrating subscriptions, push notifications, and content management tools.</li>
+        </ul>
+      </div>
+      
+      <div class="experience-entry">
+        <h3>CyberZilla</h3>
+        <span>Senior Full Stack Engineer (Mobile & Web) | 2018 - 2021 | Moscow, Russia</span>
+        <ul>
+          <li>Developed client-facing and admin panels for the Astroproxy platform.</li>
+          <li>Integrated online payment systems to improve transaction speeds and revenue.</li>
+          <li>Designed UI components to enhance user experience and operational efficiency.</li>
+          <li>Optimized backend logic for reliable performance.</li>
+        </ul>
+      </div>
+      
+      <div class="experience-entry">
+        <h3>Self Employed</h3>
+        <span>Flutter Master | 2018 - 2021</span>
+        <ul>
+          <li>Built production-ready apps including Drosdogram, Speed Test App, Meditation App, and Ithod.Safar.</li>
+          <li>Focused on real-world problem solving and continuous improvement in Flutter development.</li>
+        </ul>
+      </div>
+      
+      <div class="experience-entry">
+        <h3>Rebus</h3>
+        <span>Web Developer | 2016 - 2018 | Dushanbe, Tajikistan</span>
+        <ul>
+          <li>Developed an administrative panel for managing irrigation systems for HELVATAS.</li>
+          <li>Implemented intuitive UI/UX designs and integrated frontend with backend services.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<!-- //here ends scrolling icon -->
+  <!-- Education Section -->
+  <section id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="education-entry">
+        <h3>National Research University of Electronic Technology (MIET)</h3>
+        <span>Master's degree in Information Technology | 2018 - 2020</span>
+      </div>
+      <div class="education-entry">
+        <h3>Technological University of Tajikistan</h3>
+        <span>Bachelor's degree in Computer Software Engineering | 2014 - 2018</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p>If you’d like to get in touch, please email me at <a href="mailto:vfiruz97@gmail.com">vfiruz97@gmail.com</a> or connect via <a href="https://www.linkedin.com/in/vfiruz" target="_blank">LinkedIn</a>.</p>
+      <p>Based in Frankfurt, Hesse, Germany.</p>
+      <p><a href="Firuz_Flutter_Resume.pdf" download>Download Resume</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Firuz Dart. All Rights Reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
